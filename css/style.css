@@ -10,7 +10,11 @@ label {
 	padding-left: 0px;
 	padding-bottom: 10px;
 }
+#cabecalho{
+	position: relative;
 
+
+}
 #fieldsetIndex {
 	border: solid 1px #000;
 	width: 200px;
@@ -47,6 +51,9 @@ label {
 	
 	width: 283px;
 	height: 59px;
+	float:right;
+	padding-right: 55px;
+	clear: both;
 	
 }
 
@@ -54,11 +61,14 @@ label {
 	padding-top: 5px;
 	width: 340px;
 	height: 60px;
+	clear: both;
+	float:right;
 }
 
 #deletaB{
 
 	display:none;
+	
 }
 .selecao{
 	display: block;

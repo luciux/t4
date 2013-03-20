@@ -5,18 +5,18 @@
 	include'connection.php';
 	
 	if(isset($_SESSION['organizacao'])){
-		$_SESSION['messege'] = "Você esta logado como organização para acessar atleta ou bolsista faça logoff e entre com seu cadastro de atleta ou bolsista!";
+		$_SESSION['messege'] = "VocÃª esta logado como organizaÃ§Ã£o para acessar atleta ou bolsista faÃ§a logoff e entre com seu cadastro de atleta ou bolsista!";
 		header("Location:admSYS.php");
 		exit();
 	}
 	elseif(isset($_SESSION['atleta'])){
-		$_SESSION['messege'] = "Você esta logado como atleta para acessar bolsista ou administracao faça logoff e entre com seu cadastro de bolsista ou administracao!";
-		header("Location:atleta.php");
+		$_SESSION['messege'] = "VocÃª esta logado como atleta para acessar bolsista ou administracao faÃ§a logoff e entre com seu cadastro de bolsista ou administracao!";
+		header("Location:atletaSYS.php");
 		exit();
 	}
 	elseif(isset($_SESSION['bolsista'])){
-		$_SESSION['messege'] = "Você esta logado como bolsista para acessar atleta ou administracao faça logoff e entre com seu cadastro de atleta ou administracao!";
-		header("Location:bolsista.php");
+		$_SESSION['messege'] = "VocÃª esta logado como bolsista para acessar atleta ou administracao faÃ§a logoff e entre com seu cadastro de atleta ou administracao!";
+		header("Location:bolsistaSYS.php");
 		exit();
 	}
 	
@@ -49,39 +49,39 @@
 	
 	if(Mysql_num_rows($resultadoBolsista) > 0){
 		
-		$senhaValida = mysql_fetch_array($resultadoBolsista); //coloca em um array o resultado sendo que a senha é unica e estara na pos[0] // recupera senha
+		$senhaValida = mysql_fetch_array($resultadoBolsista); //coloca em um array o resultado sendo que a senha Ã© unica e estara na pos[0] // recupera senha
 		
 		if($senhaValida[0] == $key){ // Testa senha do banco com a do usuario
 			$_SESSION['bolsista'] = true;
-			$_SESSION['messege'] = "Você esta logado como bolsista";
-			header('Location:bolsista/bolsistaSYS.php');
+			$_SESSION['messege'] = "VocÃª esta logado como bolsista";
+			header('Location:bolsistaSYS.php');
 			exit();
 		}
 	}
 	elseif(Mysql_num_rows($resultadoAtleta) > 0){
 	
-		$senhaValida = mysql_fetch_array($resultadoAtleta); //coloca em um array o resultado sendo que a senha é unica e estara na pos[0] // recupera senha
+		$senhaValida = mysql_fetch_array($resultadoAtleta); //coloca em um array o resultado sendo que a senha Ã© unica e estara na pos[0] // recupera senha
 	
 		if($senhaValida[0] == $key){ // Testa senha do banco com a do usuario
 			$_SESSION['atleta'] = true;
-			$_SESSION['messege'] = "Você esta logado como atleta";
-			header('Location:atleta/atletaSYS.php');
+			$_SESSION['messege'] = "VocÃª esta logado como atleta";
+			header('Location:atletaSYS.php');
 			exit();
 		}
 	}
 	elseif(Mysql_num_rows($resultadoOrganizacao) > 0){
 	
-		$senhaValida = mysql_fetch_array($resultadoOrganizacao); //coloca em um array o resultado sendo que a senha é unica e estara na pos[0] // recupera senha
+		$senhaValida = mysql_fetch_array($resultadoOrganizacao); //coloca em um array o resultado sendo que a senha Ã© unica e estara na pos[0] // recupera senha
 	
 		if($senhaValida[0] == $key){ // Testa senha do banco com a do usuario
 			$_SESSION['organizacao'] = true;
-			$_SESSION['messege'] = "Você esta logado como membro da equipe de organização";
+			$_SESSION['messege'] = "VocÃª esta logado como membro da equipe de organizaÃ§Ã£o";
 			header('Location:admSYS.php');
 			exit();
 		}
 	}
 	else{
-		$_SESSION['erro'] = 'Usuário não presente na base de dados';
+		$_SESSION['erro'] = 'UsuÃ¡rio nÃ£o presente na base de dados';
 		header("Location:index.php");
 		
 	}

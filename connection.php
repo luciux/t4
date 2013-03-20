@@ -2,18 +2,18 @@
  
 	//nome do servidor (localhost)
 	//$servidor = "lucianojr-db.my.phpcloud.com:3306";
-	$servidor = "localhost";
+	$servidor = "luciano-db.my.phpcloud.com:3306";
  
 	//usuario do banco de dados
 	//$user = "lucianojr";
-	$user = "root";
+	$user = "luciano";
  
 	//senha do banco de dados
 	//$senha = "lostpatience";
-	$senha = "";
+	$senha = "lucio456";
  
 	//nome da base de dados
-	$db = "appjuffs";
+	$db = "luciano";
  
 	//executa a conexao com o banco, caso contrario mostra o erro ocorrido
 	$conexao = mysql_connect($servidor,$user,$senha) or die (mysql_error());

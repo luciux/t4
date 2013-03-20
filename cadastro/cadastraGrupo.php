@@ -20,6 +20,8 @@
 	include'../header.php';
 	cabecalho("Cadastro");
 	
+	echo'<p><a href="../admSYS.php">Voltar</a></p>';
+	
 	$query = ("SELECT idModalidade FROM grupo"); //Seleciona uma tupla de um usuario...
 	$grupo = mysql_query($query);//obtem resultado do banco
 	
@@ -43,7 +45,7 @@
 			echo '<p> <select name="grupo">';
 				for($i = 0; $i < $numRows; $i++){
 				
-					echo'<option value="'.mysql_result($grupo, $i).'">'.mysql_result($grupo, $i).'</option>'; // Coloca os grupos do banco com seleção e os envia
+					echo'<option value="'.mysql_result($grupo, $i).'">'.mysql_result($grupo, $i).'</option>'; // Coloca os grupos do banco com seleÃ§Ã£o e os envia
 				}
 				echo'<input type="submit" name="enviar" value="deletar" />';
 			echo'</select></p>';

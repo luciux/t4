@@ -21,7 +21,7 @@
 	
 		echo'<p>'.@$messege.'</p>';
 		
-		echo'<p> Mother fucker you\'re logeed in</p>';
+		echo'<p>Loagado</p>';
 		echo'<p> <a href="cadastro/cadastraGrupo.php">Gerenciar os grupos</a></p>';
 		echo'<p> <a href="cadastro/cadastraBolsista.php">Gerenciar os bolsistas </p></a>';
 		echo'<p><a href="logoff.php">Sair </p></a>';

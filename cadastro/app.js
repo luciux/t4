@@ -34,6 +34,8 @@ function showFormDel(){
 	
 	mostraBI.style.display = "block";
 	
+	mostraBI.style.float = "right";
+	
 	mostraFormEx.style.display = "block";
 	
 }

@@ -78,7 +78,7 @@
 		$idModalidade = addslashes($_POST['grupo']);
 	}else{
 		
-		$_SESSION['messege'] = "Todos os campos do formulario s„o obrigatorios";
+		$_SESSION['messege'] = "Todos os campos do formulario s√£o obrigatorios";
 		header("Location:cadastraBolsista.php");
 		exit();
 	}

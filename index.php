@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	session_start();
 	
 	if(isset($_SESSION["erro"])){
@@ -20,7 +20,7 @@
 			echo '<form method="post" action="bdQuery.php">';
 				echo'<fieldset id="fieldsetIndex">';
 					echo '<legend>Login:</legend>';
-					echo'<label for="user">Usu�rio:</label>';
+					echo'<label for="user">Usuário:</label>';
 					echo '<input type="text" name="user" value="'.@$_SESSION['user'].'" id="user"/> <br/class="brF">';
 					echo'<label for="key">Senha:</label>';
 					echo '<input type="password" name="key" value="'.@$_SESSION['key'].'" id="key"/> <br/class="brF">';
